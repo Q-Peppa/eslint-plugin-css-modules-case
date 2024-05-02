@@ -1,0 +1,9 @@
+{
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+  },
+  "eslint.options": {
+    "overrideConfigFile": ".eslintrc.js"
+  }
+}
