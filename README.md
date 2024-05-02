@@ -1,58 +1,39 @@
 # eslint-plugin-css-modules-case
 
-css-modules-case
+this plugin not allow camelCase in css-modules , inspired by [eslint-plugin-css-modules](https://github.com/atfzl/eslint-plugin-css-modules/)
 
-## Installation
+# Rules
 
-You'll first need to install [ESLint](https://eslint.org/):
+- css-modules-case/no-camel-case
+- --fix Yes
+  > if you want use kebab or snake
 
-```sh
-npm i eslint --save-dev
-```
+# Usage
 
-Next, install `eslint-plugin-css-modules-case`:
+.eslintrc.js
 
-```sh
-npm install eslint-plugin-css-modules-case --save-dev
-```
-
-## Usage
-
-Add `css-modules-case` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
-
-```json
-{
-    "plugins": [
-        "css-modules-case"
+```tsx
+ "rules": {
+      "css-modules-case/no-camel-case":[ "error" , {
+        "case" :"snake"
+      }
     ]
 }
+
+type case = 'snake' | 'kebab'
 ```
 
+# Demo
 
-Then configure the rules you want to use under the rules section.
-
-```json
-{
-    "rules": {
-        "css-modules-case/rule-name": 2
-    }
-}
+```tsx
+<main className={styles.mainContainer}> foo </main>
 ```
 
+---
 
+```sh
+ 8:22  error  mainContainer case incompatible with snake-case, should be main_container
 
-## Configurations
-
-<!-- begin auto-generated configs list -->
-TODO: Run eslint-doc-generator to generate the configs list (or delete this section if no configs are offered).
-<!-- end auto-generated configs list -->
-
-
-
-## Rules
-
-<!-- begin auto-generated rules list -->
-TODO: Run eslint-doc-generator to generate the rules list.
-<!-- end auto-generated rules list -->
-
-
+ eslint --fix
+ # -> <main className={styles["main_contanier"]}> foo </main>
+```
