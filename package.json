@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-css-modules-case",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "not allow camelCase in css-modules, use kebab-case or snake_case",
   "keywords": [
     "eslint",
