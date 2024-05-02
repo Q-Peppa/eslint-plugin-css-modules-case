@@ -1,26 +1,25 @@
 # eslint-plugin-css-modules-case
 
-this plugin not allow camelCase in css-modules , inspired by [eslint-plugin-css-modules](https://github.com/atfzl/eslint-plugin-css-modules/)
+this plugin not allow camelCase in css-modules, inspired by [eslint-plugin-css-modules](https://github.com/atfzl/eslint-plugin-css-modules/)
 
 # Rules
 
 - css-modules-case/no-camel-case
-- --fix Yes
-  > if you want use kebab or snake
+  - --fix ✅
 
 # Usage
 
 .eslintrc.js
 
-```tsx
+```json
+ "plugins":["css-modules-case"],
  "rules": {
       "css-modules-case/no-camel-case":[ "error" , {
-        "case" :"snake"
+        "case" :"snake" // 'snake' | 'kebab'
       }
     ]
 }
 
-type case = 'snake' | 'kebab'
 ```
 
 # Demo
@@ -32,8 +31,8 @@ type case = 'snake' | 'kebab'
 ---
 
 ```sh
- 8:22  error  mainContainer case incompatible with snake-case, should be main_container
+error  mainContainer case incompatible with snake-case, should be main_container
 
- eslint --fix
+eslint --fix
  # -> <main className={styles["main_contanier"]}> foo </main>
 ```
