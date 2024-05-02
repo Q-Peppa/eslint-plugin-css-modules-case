@@ -1,13 +1,15 @@
 {
   "name": "eslint-plugin-css-modules-case",
-  "version": "0.0.1",
-  "description": "css-modules-case",
+  "version": "0.0.3",
+  "description": "not allow camelCase in css-modules, use kebab-case or snake_case",
   "keywords": [
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "css-modules",
+    "css-modules-case"
   ],
-  "author": "qhj",
+  "author": "q-peppa",
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
   "scripts": {
@@ -35,5 +37,9 @@
   "peerDependencies": {
     "eslint": ">=7"
   },
-  "license": "ISC"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Q-Peppa/eslint-plugin-css-modules-case"
+  }
 }
